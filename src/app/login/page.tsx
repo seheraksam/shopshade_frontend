@@ -17,7 +17,7 @@ export default function LoginPage() {
   
   try {
     console.log("Sending request...");
-    const res = await api.post('/api/login', { "email": email, "password": password });
+    const res = await api.post('http://localhost:8080/api/login', { "email": email, "password": password });
     console.log("Response received:", res);
   } catch (err) {
     console.error("Full error object:", err);
